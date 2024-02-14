@@ -47,13 +47,14 @@ class FestaText extends StatelessWidget {
       title,
       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
           color: titleColor ?? ColorConstants.primary,
-          fontWeight: fontWeight ?? FontWeight.w400,
+          fontWeight: fontWeight ?? FontWeight.w600,
           decoration:
               isUnderline == true ? TextDecoration.underline : textDecoration,
           fontFamily: fontFamily ?? 'Inter',
           letterSpacing: letterSpacing ?? 0,
           overflow: TextOverflow.ellipsis,
           height: lineHeight ?? 1.5,
+          decorationColor: titleColor ?? ColorConstants.primary,
           fontSize: fontSize ?? 16),
       textAlign: titleTextAlign,
       maxLines: maxLine,
