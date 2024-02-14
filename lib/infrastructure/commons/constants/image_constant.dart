@@ -12,4 +12,14 @@ class ImageConstants {
   static const String shinoda = "${path}shinoda.png";
   static const String taylor = "${path}taylor.png";
   static const String anujjain = "${path}anujjain.png";
+  static const String chester = "${path}chester.png";
+  static const String anson = "${path}anson.png";
+  static const String locationRed = "${path}location_red.svg";
+  static const String search = "${path}search.svg";
+  static const String notification = "${path}notification.svg";
+  static const String techno = "${path}techno.png";
+  static const String bollywood = "${path}bollywood.png";
+  static const String ladiesNight = "${path}ladies_night.png";
+  static const String edm = "${path}edm.png";
+  static const String party = "${path}party.png";
 }
