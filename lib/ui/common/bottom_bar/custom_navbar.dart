@@ -145,6 +145,9 @@ class CustomBottomNavBar extends StatelessWidget {
                           child: Image.network(
                             "https://s3-alpha-sig.figma.com/img/1f07/f85d/f4e9131dfbb5d832be5dd2fb2b7bc270?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ANi6eZ0GqGrX8u2SeACml6dwc6FwY4G9WUTJtz-qGUlvm3FBJlthAiJZhww405mgwh-Ev5k20eCc49ADZDr6hEKe0zdcY1SE9hjhKKh6rHCVFkVde9dQfZ8uEMAAyftBy0JzkGdM1tylgkqeofbyQXjd3YhJ0e0xRXy9MmBPaq09v1FwB1efdWRMLfG28BZ6zLU7pG2clFttGjbWQdbd2q8sJk0h~udgHAjEebyrct4w~emLb~jQ3lCIpVEuvUx5oGu3IjIPbOCSznFNCb0rrI~VY9tUp3CZfV2zbeJlYANaUyLYE2FIvV5oJ6yhb6xbyI7aYJyTvUX~UQ2TwaAkGg__",
                             fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) {
+                              return const CircleAvatar();
+                            },
                           ),
                         ),
                       ),

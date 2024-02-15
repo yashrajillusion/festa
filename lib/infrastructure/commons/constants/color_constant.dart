@@ -13,4 +13,5 @@ class ColorConstants {
   static const Color suggested = Color(0xff020202);
   static const Color suggestedBorder = Color(0xff353535);
   static const Color grey99 = Color(0xff999999);
+  static const Color locationBg = Color(0xff050505);
 }

@@ -2,14 +2,19 @@ import 'package:festa/infrastructure/commons/constants/color_constant.dart';
 import 'package:festa/infrastructure/commons/constants/image_constant.dart';
 import 'package:festa/ui/common/bottom_bar/custom_navbar.dart';
 import 'package:festa/ui/common/slider/slider.dart';
-import 'package:festa/ui/common/text_fields/text_fields_widget.dart';
 import 'package:festa/ui/common/text_widget/festa_text.dart';
+import 'package:festa/ui/screen/home_screen/choose_location_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     const int currentInd = 2;
@@ -22,21 +27,6 @@ class HomeScreen extends StatelessWidget {
       ImageConstants.bollywood,
       ImageConstants.ladiesNight,
       ImageConstants.edm,
-    ];
-
-    final List<SuggestedCityModal> suggestCityList = [
-      SuggestedCityModal(
-          cityName: "Bangalore", cityUrl: ImageConstants.bangalore),
-      SuggestedCityModal(cityName: "Mumbai", cityUrl: ImageConstants.mumbai),
-      SuggestedCityModal(cityName: "Delhi", cityUrl: ImageConstants.delhi),
-      SuggestedCityModal(
-          cityName: "Hyderabad", cityUrl: ImageConstants.hyderabad),
-      SuggestedCityModal(
-          cityName: "Bangalore", cityUrl: ImageConstants.bangalore),
-      SuggestedCityModal(cityName: "Mumbai", cityUrl: ImageConstants.mumbai),
-      SuggestedCityModal(cityName: "Delhi", cityUrl: ImageConstants.delhi),
-      SuggestedCityModal(
-          cityName: "Hyderabad", cityUrl: ImageConstants.hyderabad),
     ];
 
     return SafeArea(
@@ -59,7 +49,18 @@ class HomeScreen extends StatelessWidget {
                       titleColor: ColorConstants.grey0,
                     ),
                     const Spacer(),
-                    SvgPicture.asset(ImageConstants.search),
+                    InkWell(
+                      onTap: () {
+                        showDialog(
+                          barrierDismissible: false,
+                          context: context,
+                          builder: (context) {
+                            return ChooseLocation();
+                          },
+                        );
+                      },
+                      child: SvgPicture.asset(ImageConstants.search),
+                    ),
                     const SizedBox(width: 16),
                     SvgPicture.asset(ImageConstants.notification),
                   ],
@@ -98,125 +99,6 @@ class HomeScreen extends StatelessWidget {
                   separatorBuilder: (context, index) {
                     return const SizedBox(width: 12);
                   },
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 16),
-                decoration: BoxDecoration(
-                    color: ColorConstants.grey950,
-                    border: Border.all(
-                      color: ColorConstants.grey850,
-                      width: 2,
-                    ),
-                    borderRadius: BorderRadius.circular(20)),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          FestaText(
-                            title: "Choose your Location",
-                            fontSize: 18,
-                          ),
-                          Icon(
-                            Icons.close,
-                            color: ColorConstants.primary,
-                            size: 24,
-                          )
-                        ],
-                      ),
-                    ),
-                    TextFormFieldWidget(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      prefixIconWidgetConstraints:
-                          const BoxConstraints(maxHeight: 24),
-                      prefixIconWidget: Padding(
-                        padding: const EdgeInsets.only(left: 10, right: 8),
-                        child: SvgPicture.asset(
-                          ImageConstants.search,
-                          color: ColorConstants.grey99,
-                        ),
-                      ),
-                      suffixIcon: const Padding(
-                        padding: EdgeInsets.all(6.0),
-                        child: Icon(
-                          Icons.close,
-                          color: ColorConstants.grey600,
-                          size: 24,
-                        ),
-                      ),
-                      textColor: ColorConstants.grey99,
-                      fillColor: Colors.black,
-                      contentPadding: const EdgeInsets.symmetric(
-                          vertical: 10, horizontal: 8),
-                      borderRadius: 10,
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Row(
-                        children: [
-                          SvgPicture.asset(ImageConstants.gps),
-                          const SizedBox(width: 8),
-                          const FestaText(
-                            title: "Detect my location",
-                            fontSize: 14,
-                          ),
-                        ],
-                      ),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: 16, bottom: 8),
-                      child: FestaText(
-                        title: "Suggested",
-                        fontSize: 14,
-                      ),
-                    ),
-                    Container(
-                      height: 80,
-                      margin: const EdgeInsets.only(left: 16, bottom: 16),
-                      child: ListView.separated(
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) {
-                            return Container(
-                              decoration: BoxDecoration(
-                                color: ColorConstants.suggested,
-                                border: Border.all(
-                                  color: ColorConstants.suggestedBorder,
-                                ),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        27, 15, 27, 14),
-                                    child: SvgPicture.asset(
-                                        suggestCityList[index].cityUrl),
-                                  ),
-                                  FestaText(
-                                    title: suggestCityList[index].cityName,
-                                    fontSize: 12,
-                                  ),
-                                  const SizedBox(height: 7)
-                                ],
-                              ),
-                            );
-                          },
-                          separatorBuilder: (context, index) {
-                            return const SizedBox(width: 10);
-                          },
-                          itemCount: suggestCityList.length),
-                    )
-                  ],
                 ),
               ),
               const SizedBox(height: 350),
