@@ -22,4 +22,9 @@ class ImageConstants {
   static const String ladiesNight = "${path}ladies_night.png";
   static const String edm = "${path}edm.png";
   static const String party = "${path}party.png";
+  static const String gps = "${path}gps.svg";
+  static const String bangalore = "${path}bangalore.svg";
+  static const String mumbai = "${path}mumbai.svg";
+  static const String delhi = "${path}delhi.svg";
+  static const String hyderabad = "${path}hyderabad.svg";
 }
