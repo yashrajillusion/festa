@@ -25,5 +25,16 @@ class FetchAutoPlace extends HomeEvent {
   const FetchAutoPlace(this.searchQuery);
 
   @override
-  List<Object?> get props => [FetchAutoPlace];
+  List<Object?> get props => [searchQuery];
+}
+
+class ClearPlaceSuggestion extends HomeEvent {}
+
+class UpdateNavBarIndex extends HomeEvent {
+  final int navbarIndex;
+
+  const UpdateNavBarIndex(this.navbarIndex);
+
+  @override
+  List<Object?> get props => [navbarIndex];
 }

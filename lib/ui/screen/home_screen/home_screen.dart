@@ -1,6 +1,5 @@
 import 'package:festa/infrastructure/commons/constants/color_constant.dart';
 import 'package:festa/infrastructure/commons/constants/image_constant.dart';
-import 'package:festa/ui/common/bottom_bar/custom_navbar.dart';
 import 'package:festa/ui/common/slider/slider.dart';
 import 'package:festa/ui/common/text_widget/festa_text.dart';
 import 'package:festa/ui/screen/home_screen/choose_location_model.dart';
@@ -17,7 +16,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    const int currentInd = 2;
     const List<String> partyUrl = [
       ImageConstants.techno,
       ImageConstants.bollywood,
@@ -106,24 +104,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.all(16.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: SliderScreen(),
+                  child: const SliderScreen(),
                 ),
               ),
             ],
           ),
         ),
-        bottomNavigationBar: CustomBottomNavBar(currentInd: currentInd),
       ),
     );
   }
-}
-
-class SuggestedCityModal {
-  final String cityUrl;
-  final String cityName;
-
-  SuggestedCityModal({
-    required this.cityUrl,
-    required this.cityName,
-  });
 }

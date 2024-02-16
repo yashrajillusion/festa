@@ -2,7 +2,7 @@ import 'package:festa/infrastructure/commons/constants/color_constant.dart';
 import 'package:festa/infrastructure/commons/constants/image_constant.dart';
 import 'package:festa/ui/common/text_fields/text_fields_widget.dart';
 import 'package:festa/ui/common/text_widget/festa_text.dart';
-import 'package:festa/ui/screen/home_screen.dart';
+import 'package:festa/ui/screen/home.dart';
 import 'package:festa/ui/screen/home_screen/home_bloc/home_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +16,7 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
-  TextEditingController controller = TextEditingController();
+  final TextEditingController controller = TextEditingController();
 
   final List<SuggestedCityModal> suggestCityList = [
     SuggestedCityModal(
@@ -94,10 +94,10 @@ class _ChooseLocationState extends State<ChooseLocation> {
                           overlayColor:
                               MaterialStateProperty.all(Colors.transparent),
                           onTap: () {
-                            setState(() {
-                              controller.clear();
-                              // state.placeSuggestions?.clear();
-                            });
+                            context
+                                .read<HomeBloc>()
+                                .add(ClearPlaceSuggestion());
+                            controller.clear();
                           },
                           child: const Padding(
                             padding: EdgeInsets.all(6.0),

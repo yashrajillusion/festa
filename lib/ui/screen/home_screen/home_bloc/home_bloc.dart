@@ -9,9 +9,15 @@ part 'home_event.dart';
 part 'home_state.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
-  HomeBloc() : super(const HomeState(placeSuggestions: [])) {
+  HomeBloc()
+      : super(const HomeState(
+          placeSuggestions: [],
+          currentNavbarIndex: 0,
+        )) {
     on<AddPlaceSuggestion>(_onGoogleApiCall);
     on<FetchAutoPlace>(_fetchAutoPlace);
+    on<ClearPlaceSuggestion>(_clearPlaceSuggestion);
+    on<UpdateNavBarIndex>(_updateNavBarIndex);
   }
 
   void _onGoogleApiCall(AddPlaceSuggestion event, Emitter<HomeState> emit) {
@@ -20,6 +26,17 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         placeSuggestions: event.placeSuggestions,
       ),
     );
+  }
+
+  void _clearPlaceSuggestion(
+      ClearPlaceSuggestion event, Emitter<HomeState> emit) {
+    emit(
+      state.copyWith(placeSuggestions: []),
+    );
+  }
+
+  void _updateNavBarIndex(UpdateNavBarIndex event, Emitter<HomeState> emit) {
+    emit(state.copyWith(currentNavbarIndex: event.navbarIndex));
   }
 
   void _fetchAutoPlace(FetchAutoPlace event, Emitter<HomeState> emit) async {
