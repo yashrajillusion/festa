@@ -14,19 +14,19 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final List<String> partyUrl = [
+    ImageConstants.techno,
+    ImageConstants.bollywood,
+    ImageConstants.ladiesNight,
+    ImageConstants.edm,
+    ImageConstants.techno,
+    ImageConstants.bollywood,
+    ImageConstants.ladiesNight,
+    ImageConstants.edm,
+  ];
+
   @override
   Widget build(BuildContext context) {
-    const List<String> partyUrl = [
-      ImageConstants.techno,
-      ImageConstants.bollywood,
-      ImageConstants.ladiesNight,
-      ImageConstants.edm,
-      ImageConstants.techno,
-      ImageConstants.bollywood,
-      ImageConstants.ladiesNight,
-      ImageConstants.edm,
-    ];
-
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           barrierDismissible: false,
                           context: context,
                           builder: (context) {
-                            return ChooseLocation();
+                            return const ChooseLocation();
                           },
                         );
                       },
@@ -64,16 +64,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(16),
+              const Padding(
+                padding: EdgeInsets.all(16),
                 child: FestaText(
                   title: "Hey James, Let’s party!",
                   fontSize: 14,
                   titleColor: ColorConstants.grey600,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16),
                 child: FestaText(
                   title: "Pick your experience",
                   fontSize: 18,

@@ -25,9 +25,7 @@ class _SliderScreenState extends State<SliderScreen> {
       Stack(
         children: [
           InkWell(
-            onTap: () {
-              print(currentIndex);
-            },
+            onTap: () {},
             child: CarouselSlider(
               items: imageList
                   .map(
@@ -84,8 +82,8 @@ class _SliderScreenState extends State<SliderScreen> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: currentIndex == entry.key
-                            ? Color(0xff2c2c2d)
-                            : Color(0xff666666),
+                            ? const Color(0xff2c2c2d)
+                            : const Color(0xff666666),
                       )),
                 );
               }).toList(),

@@ -27,13 +27,13 @@ class ShareButton extends StatelessWidget {
               ),
             ),
           ),
-          FestaText(
+          const FestaText(
             title: "Share",
             fontSize: 14,
             fontWeight: FontWeight.w700,
           ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 14, horizontal: 12),
+            margin: const EdgeInsets.symmetric(vertical: 14, horizontal: 12),
             width: 16,
             height: 16,
             decoration: BoxDecoration(

@@ -233,12 +233,11 @@ class TextFormFieldWidget extends StatelessWidget {
     return Padding(
       padding: padding ?? const EdgeInsets.fromLTRB(0, 8.0, 8.0, 8.0),
       child: TextFormField(
-        scrollPadding: scrollPadding ?? EdgeInsets.only(bottom: 0),
+        scrollPadding: scrollPadding ?? const EdgeInsets.only(bottom: 0),
         textAlign: textAlign ?? TextAlign.left,
         inputFormatters: inputFormatters,
         validator: validator,
         focusNode: focusNode,
-        // showCursor: true,
         maxLines: maxLines ?? 1,
         minLines: minLines ?? 1,
         maxLength: maxLength,

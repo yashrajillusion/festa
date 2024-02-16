@@ -22,19 +22,11 @@ class _HomeState extends State<Home> {
         builder: (context, state) {
           return Scaffold(
             backgroundColor: Colors.black,
-            body: const [
-              HomeScreen(),
-              Center(
-                  child: FestaText(
-                title: "Upcoming section",
-                fontSize: 16,
-              )),
-              TicketScreen(),
-              Center(
-                  child: FestaText(
-                title: "Upcoming section",
-                fontSize: 16,
-              )),
+            body: [
+              const HomeScreen(),
+              _upcoming(),
+              const TicketScreen(),
+              _upcoming()
             ][state.currentNavbarIndex],
             bottomNavigationBar:
                 CustomBottomNavBar(currentInd: state.currentNavbarIndex),
@@ -43,14 +35,12 @@ class _HomeState extends State<Home> {
       ),
     );
   }
-}
 
-class SuggestedCityModal {
-  final String cityUrl;
-  final String cityName;
-
-  SuggestedCityModal({
-    required this.cityUrl,
-    required this.cityName,
-  });
+  Center _upcoming() {
+    return const Center(
+        child: FestaText(
+      title: "Upcoming section",
+      fontSize: 16,
+    ));
+  }
 }

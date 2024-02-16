@@ -27,7 +27,7 @@ class TicketScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 22),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CustomButton(
@@ -43,7 +43,7 @@ class TicketScreen extends StatelessWidget {
               ),
             ],
           ),
-          Stack(
+          const Stack(
             alignment: Alignment.topCenter,
             children: [
               HistoryTicketCard(
@@ -52,7 +52,7 @@ class TicketScreen extends StatelessWidget {
                 gradient: [Color(0xffBD4C80), Color(0xff983C75)],
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 66),
+                padding: EdgeInsets.only(top: 66),
                 child: HistoryTicketCard(
                   imgPath: ImageConstants.taylor,
                   hostName: "Tylor Swift",
@@ -60,7 +60,7 @@ class TicketScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 132),
+                padding: EdgeInsets.only(top: 132),
                 child: HistoryTicketCard(
                   imgPath: ImageConstants.shinoda,
                   hostName: "Mike Shinoda",
@@ -69,8 +69,8 @@ class TicketScreen extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 55),
-          Stack(
+          const SizedBox(height: 55),
+          const Stack(
             alignment: Alignment.topCenter,
             children: [
               HistoryTicketCard(
@@ -79,7 +79,7 @@ class TicketScreen extends StatelessWidget {
                 gradient: [Color(0xffDC0208), Color(0xff670178)],
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 66),
+                padding: EdgeInsets.only(top: 66),
                 child: HistoryTicketCard(
                   imgPath: ImageConstants.anson,
                   hostName: "Anson Seabra",
@@ -121,8 +121,8 @@ class TicketScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(76.26),
                             ),
                           ),
-                          SizedBox(width: 9.69),
-                          Column(
+                          const SizedBox(width: 9.69),
+                          const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               FestaText(title: "Anuj Jain", fontSize: 18),
@@ -134,8 +134,8 @@ class TicketScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Spacer(),
-                          Column(
+                          const Spacer(),
+                          const Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               FestaText(
@@ -166,7 +166,7 @@ class TicketScreen extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(
+                      margin: const EdgeInsets.only(
                         bottom: 0.58,
                         left: .42,
                         right: .42,
@@ -185,56 +185,56 @@ class TicketScreen extends StatelessWidget {
                             Row(
                               children: [
                                 SvgPicture.asset(ImageConstants.location),
-                                SizedBox(width: 4.84),
-                                FestaText(
+                                const SizedBox(width: 4.84),
+                                const FestaText(
                                   title: "Mumbai Stadium, Mumbai, India",
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500,
                                 )
                               ],
                             ),
-                            SizedBox(width: 9.68),
+                            const SizedBox(width: 9.68),
                             Row(
                               children: [
                                 SvgPicture.asset(ImageConstants.location),
-                                SizedBox(width: 4.84),
-                                FestaText(
+                                const SizedBox(width: 4.84),
+                                const FestaText(
                                   title: "03-04-2023, 11:00am - 2:00pm",
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500,
                                 )
                               ],
                             ),
-                            SizedBox(width: 9.68),
+                            const SizedBox(width: 9.68),
                             Row(
                               children: [
                                 SvgPicture.asset(ImageConstants.ticket),
-                                SizedBox(width: 4.84),
-                                FestaText(
+                                const SizedBox(width: 4.84),
+                                const FestaText(
                                   title: "Row: 2",
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500,
                                 ),
-                                SizedBox(width: 29.05),
-                                FestaText(
+                                const SizedBox(width: 29.05),
+                                const FestaText(
                                   title: "Seats: 09,10",
                                   fontSize: 14.5,
                                   fontWeight: FontWeight.w500,
                                 )
                               ],
                             ),
-                            SizedBox(width: 8.47),
+                            const SizedBox(width: 8.47),
                             Row(
                               children: [
                                 SvgPicture.asset(ImageConstants.ticket),
-                                SizedBox(width: 4.84),
-                                FestaText(
+                                const SizedBox(width: 4.84),
+                                const FestaText(
                                   title: "₹10,000",
                                   fontSize: 19.37,
                                   fontWeight: FontWeight.w700,
                                 ),
-                                SizedBox(width: 6.05),
-                                FestaText(
+                                const SizedBox(width: 6.05),
+                                const FestaText(
                                   title: "₹15,000",
                                   fontSize: 14.5,
                                   fontWeight: FontWeight.w500,
@@ -243,7 +243,7 @@ class TicketScreen extends StatelessWidget {
                                 )
                               ],
                             ),
-                            SizedBox(width: 8.47),
+                            const SizedBox(width: 8.47),
                             Padding(
                               padding: const EdgeInsets.only(left: 12.11),
                               child: SvgPicture.asset(
@@ -265,7 +265,7 @@ class TicketScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: Colors.black,
                         shape: BoxShape.rectangle,
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           topRight: Radius.circular(50),
                           bottomRight: Radius.circular(50),
                         ),
@@ -281,7 +281,7 @@ class TicketScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: Colors.black,
                         shape: BoxShape.rectangle,
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(50),
                           bottomLeft: Radius.circular(50),
                         ),
@@ -291,15 +291,13 @@ class TicketScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-
-                    //
                   ],
                 )
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 16, top: 20, bottom: 28),
+          const Padding(
+            padding: EdgeInsets.only(left: 16, top: 20, bottom: 28),
             child: Row(
               children: [DownloadButton(), SizedBox(width: 30), ShareButton()],
             ),

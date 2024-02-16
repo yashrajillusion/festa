@@ -1,10 +1,6 @@
 import 'package:festa/infrastructure/commons/constants/color_constant.dart';
 import 'package:flutter/material.dart';
 
-/// Use FestaText for any text and the Required Parameter’s are title and fontSize.
-/// Default Parameter’s are
-/// font size = 16 ,lineHeight = 1.5 ,fontWeight: 400,
-
 class FestaText extends StatelessWidget {
   const FestaText(
       {Key? key,

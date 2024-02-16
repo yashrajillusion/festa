@@ -13,7 +13,7 @@ class CustomButton extends StatelessWidget {
       decoration: BoxDecoration(
         color: isPrimary ? null : ColorConstants.grey900,
         gradient: isPrimary
-            ? LinearGradient(
+            ? const LinearGradient(
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
                 colors: [Color(0xFFFF1759), Color(0xFFBF0036)],
@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
             : null,
         borderRadius: BorderRadius.circular(6.0),
       ),
-      padding: EdgeInsets.symmetric(vertical: 6.0, horizontal: 10.0),
+      padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 10.0),
       child: FestaText(
         title: title,
         fontSize: 14,

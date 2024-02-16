@@ -1,8 +1,8 @@
 import 'package:festa/infrastructure/commons/constants/color_constant.dart';
 import 'package:festa/infrastructure/commons/constants/image_constant.dart';
+import 'package:festa/infrastructure/models/city_model.dart';
 import 'package:festa/ui/common/text_fields/text_fields_widget.dart';
 import 'package:festa/ui/common/text_widget/festa_text.dart';
-import 'package:festa/ui/screen/home.dart';
 import 'package:festa/ui/screen/home_screen/home_bloc/home_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';

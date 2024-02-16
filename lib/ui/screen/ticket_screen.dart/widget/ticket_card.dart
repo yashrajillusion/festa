@@ -20,8 +20,8 @@ class HistoryTicketCard extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          margin: EdgeInsets.symmetric(horizontal: 16),
-          padding: EdgeInsets.fromLTRB(12, 12, 12, 27.76),
+          margin: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.fromLTRB(12, 12, 12, 27.76),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               gradient: LinearGradient(
@@ -39,19 +39,19 @@ class HistoryTicketCard extends StatelessWidget {
                     height: 102,
                     width: 102,
                   ),
-                  SizedBox(width: 12),
+                  const SizedBox(width: 12),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 7),
+                      const SizedBox(height: 7),
                       FestaText(title: hostName, fontSize: 18),
-                      SizedBox(height: 2),
+                      const SizedBox(height: 2),
                       FestaText(
                         title: "India Tour 2023",
                         fontSize: 12,
                         titleColor: ColorConstants.primary.withOpacity(0.7),
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       Row(
                         children: [
                           SvgPicture.asset(
@@ -60,15 +60,15 @@ class HistoryTicketCard extends StatelessWidget {
                             width: 16,
                             color: Colors.white,
                           ),
-                          SizedBox(width: 4),
-                          FestaText(
+                          const SizedBox(width: 4),
+                          const FestaText(
                             title: "03-04-2023, 11:00am - 2:00pm",
                             fontSize: 12,
                             fontWeight: FontWeight.w600,
                           )
                         ],
                       ),
-                      SizedBox(width: 4),
+                      const SizedBox(width: 4),
                       Row(
                         children: [
                           SvgPicture.asset(
@@ -77,8 +77,8 @@ class HistoryTicketCard extends StatelessWidget {
                             width: 16,
                             color: Colors.white,
                           ),
-                          SizedBox(width: 4),
-                          FestaText(
+                          const SizedBox(width: 4),
+                          const FestaText(
                             title: "Mumbai Stadium, Mumbai, India",
                             fontSize: 12,
                             fontWeight: FontWeight.w600,
@@ -89,7 +89,7 @@ class HistoryTicketCard extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: 13),
+              const SizedBox(height: 13),
               SvgPicture.asset(
                 ImageConstants.barcode,
               )

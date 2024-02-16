@@ -24,7 +24,7 @@ class DownloadButton extends StatelessWidget {
         children: [
           SvgPicture.asset(ImageConstants.download),
           const SizedBox(width: 10),
-          FestaText(
+          const FestaText(
             title: "Download",
             fontSize: 14,
             fontWeight: FontWeight.w700,
