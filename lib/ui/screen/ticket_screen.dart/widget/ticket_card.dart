@@ -101,245 +101,21 @@ class HistoryTicketCard extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 12),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(50),
-                        bottomRight: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50),
-                        bottomLeft: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              sideCornerDot(),
               const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(50),
-                        bottomRight: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50),
-                        bottomLeft: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              sideCornerDot(),
               const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(50),
-                        bottomRight: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50),
-                        bottomLeft: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              sideCornerDot(),
               const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(50),
-                        bottomRight: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50),
-                        bottomLeft: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              sideCornerDot(),
               const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(50),
-                        bottomRight: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50),
-                        bottomLeft: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              sideCornerDot(),
               const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(50),
-                        bottomRight: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50),
-                        bottomLeft: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              sideCornerDot(),
               const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(50),
-                        bottomRight: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50),
-                        bottomLeft: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              sideCornerDot(),
               const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(50),
-                        bottomRight: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 6,
-                    height: 12,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50),
-                        bottomLeft: Radius.circular(50),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              sideCornerDot(),
               const SizedBox(height: 10),
             ],
           ),
@@ -353,6 +129,38 @@ class HistoryTicketCard extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         )
+      ],
+    );
+  }
+
+  Row sideCornerDot() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Container(
+          width: 6,
+          height: 12,
+          decoration: const BoxDecoration(
+            color: Colors.black,
+            shape: BoxShape.rectangle,
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(50),
+              bottomRight: Radius.circular(50),
+            ),
+          ),
+        ),
+        Container(
+          width: 6,
+          height: 12,
+          decoration: const BoxDecoration(
+            color: Colors.black,
+            shape: BoxShape.rectangle,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(50),
+              bottomLeft: Radius.circular(50),
+            ),
+          ),
+        ),
       ],
     );
   }
