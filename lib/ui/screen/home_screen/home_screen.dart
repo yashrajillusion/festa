@@ -99,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 ),
               ),
-              const SizedBox(height: 350),
+              const SizedBox(height: 300),
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: ClipRRect(
