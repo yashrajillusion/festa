@@ -1,5 +1,16 @@
 # festa
 
+## Installation
+
+Install festa with flutter
+
+```bash
+    download festa
+    downlaod flutter sdk 3.16.3
+    flutter pub get
+    flutter pub run
+```
+
 ## Upcoming Events
 
 <img width="25%" height="25%" alt="image" src="https://github.com/yashrajillusion/festa/assets/95868808/fa609f8e-46c9-4808-83c3-9f2ec9a5cab9">
