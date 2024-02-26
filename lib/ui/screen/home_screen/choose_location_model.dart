@@ -136,16 +136,27 @@ class _ChooseLocationState extends State<ChooseLocation> {
                             : ListView.builder(
                                 itemCount: state.placeSuggestions?.length ?? 0,
                                 itemBuilder: (context, index) {
-                                  return Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 18, top: 16),
-                                    child: FestaText(
-                                      title: state.placeSuggestions?[index]
-                                              .description ??
-                                          "",
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w400,
-                                      maxLine: 2,
+                                  return InkWell(
+                                    onTap: () {
+                                      context.read<HomeBloc>().add(
+                                            FetchCoordinates(
+                                                state.placeSuggestions?[index]
+                                                        .placeId ??
+                                                    "",
+                                                context),
+                                          );
+                                    },
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 18, top: 16),
+                                      child: FestaText(
+                                        title: state.placeSuggestions?[index]
+                                                .description ??
+                                            "",
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w400,
+                                        maxLine: 2,
+                                      ),
                                     ),
                                   );
                                 },

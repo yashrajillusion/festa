@@ -28,6 +28,16 @@ class FetchAutoPlace extends HomeEvent {
   List<Object?> get props => [searchQuery];
 }
 
+class FetchCoordinates extends HomeEvent {
+  final String placeId;
+  final BuildContext context;
+
+  const FetchCoordinates(this.placeId, this.context);
+
+  @override
+  List<Object?> get props => [placeId, context];
+}
+
 class ClearPlaceSuggestion extends HomeEvent {}
 
 class UpdateNavBarIndex extends HomeEvent {
